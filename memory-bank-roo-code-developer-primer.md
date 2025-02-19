@@ -31,46 +31,21 @@ flowchart TD
 
 ## 📚 Memory Bank Structure
 
-The Memory Bank system consists of a `memory-bank/` directory containing core and optional files:
+The Memory Bank system consists of a `memory-bank/` directory with two main sections:
 
+1. Core Files (root level):
+   - activeContext.md
+   - productContext.md
+   - progress.md
+   - decisionLog.md
 
-### Core Files
-
-1. **activeContext.md**
-   - Purpose: Tracks current session state and goals
-   - Content:
-     - Current tasks and objectives
-     - Recent changes and decisions
-     - Open questions and blockers
-     - Session-specific context
-   - Update Frequency: Every session
-
-2. **productContext.md**
-   - Purpose: Defines project scope and core knowledge
-   - Content:
-     - Project overview and goals
-     - Component architecture
-     - Technical standards
-     - Key dependencies
-   - Update Frequency: When project scope changes
-
-3. **progress.md**
-   - Purpose: Tracks work status and milestones
-   - Content:
-     - Completed work items
-     - Current tasks
-     - Next steps
-     - Known issues
-   - Update Frequency: As tasks progress
-
-4. **decisionLog.md**
-   - Purpose: Records important decisions
-   - Content:
-     - Technical decisions
-     - Architecture choices
-     - Implementation details
-     - Alternative considerations
-   - Update Frequency: When decisions are made
+2. Additional Files (`plans/` subdirectory):
+   - Project-specific documentation
+   - System patterns
+   - Architecture plans
+   - Implementation strategies
+   
+Note: All non-core files should be stored in the `memory-bank/plans/` directory for better organization.
 
 
 ## 🔄 Mode System

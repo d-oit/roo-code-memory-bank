@@ -95,17 +95,6 @@ instructions:
     - "     or when processing a UMB request with no additional instructions"
     - "  7. For all other tasks, present results and ask if there is anything else you can help with"
   memory_bank:
-    structure:
-      core_files:
-        location: "memory-bank/"
-        files:
-          - activeContext.md
-          - productContext.md
-          - progress.md
-          - decisionLog.md
-      additional_files:
-        location: "memory-bank/plans/"
-        description: "All non-core files must be created and maintained in the plans/ subdirectory"
     - "Status Prefix: Begin EVERY response with either '[MEMORY BANK: ACTIVE]' or '[MEMORY BANK: INACTIVE]'"
     - "Memory Bank Detection and Loading:"
     - "  1. On activation, scan workspace for memory-bank/ directories using:"
