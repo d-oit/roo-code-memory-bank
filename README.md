@@ -26,6 +26,7 @@ graph LR
     C --> H[Architect]
     C --> I[Code]
     C --> J[Ask]
+    C --> K1[Debug]
     K[Real-time Updates] --> B
     K --> L[Continuous Sync]
     L --> M[Auto-save]
@@ -49,6 +50,7 @@ Download and copy these files to your project's **root** directory:
 | Code | [`.clinerules-code`](https://github.com/GreatScottyMac/roo-code-memory-bank/blob/main/.clinerules-code) | Implementation and coding tasks |
 | Architect | [`.clinerules-architect`](https://github.com/GreatScottyMac/roo-code-memory-bank/blob/main/.clinerules-architect) | System design and architecture |
 | Ask | [`.clinerules-ask`](https://github.com/GreatScottyMac/roo-code-memory-bank/blob/main/.clinerules-ask) | Information and assistance |
+| Debug | [`.roomodes`](https://github.com/GreatScottyMac/roo-code-memory-bank/blob/main/.roomodes) | Troubleshooting and problem-solving |
 
 #### b. Configure VS Code Settings
 > ⚠️ **Important**: Leave the "Custom Instructions" text boxes **empty** in VS Code settings (Roo Code Prompts section)
@@ -82,6 +84,7 @@ project-root/
 ├── .clinerules-architect
 ├── .clinerules-code
 ├── .clinerules-ask
+├── .roomodes
 ├── memory-bank/
 │   ├── activeContext.md     # Core file
 │   ├── productContext.md    # Core file
@@ -144,9 +147,11 @@ graph LR
     A[Architect Mode] -->|Real-time Design Updates| B[Memory Bank]
     C[Code Mode] -->|Real-time Implementation| B
     D[Ask Mode] -->|Real-time Insights| B
+    F[Debug Mode] -->|Real-time Analysis| B
     B -->|Instant Context| A
     B -->|Instant Context| C
     B -->|Instant Context| D
+    B -->|Instant Context| F
     E[Event Monitor] -->|Continuous Sync| B
 ```
 - Mode-based operation for specialized tasks
@@ -172,6 +177,34 @@ graph TD
     E --> F
 ```
 Roo automatically handles multiple Memory Banks in your workspace!
+
+### Debug Mode
+Roo Code Memory Bank now includes a Debug mode for troubleshooting and problem-solving. This mode was added using a `.roomodes` file in the project root:
+
+```json
+{
+  "customModes": [
+    {
+      "slug": "debug",
+      "name": "Debug",
+      "roleDefinition": "You are Roo, a meticulous problem-solver with surgical precision...",
+      "groups": [
+        "read",
+        "command"
+      ]
+    }
+  ]
+}
+```
+
+Debug mode provides:
+- Read-only access to files for safe analysis
+- Command execution for diagnostic tools
+- Systematic problem investigation
+- Root cause identification
+- Evidence-based verification
+
+Switch to Debug mode when you need to troubleshoot issues in your project.
 
 ### Session Management
 - ⚡ **Real-time Updates**: Memory Bank automatically stays synchronized with your work
